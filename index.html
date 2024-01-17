@@ -15,25 +15,35 @@
     
 
     <script>
-        const facts = ['Drinking a cup of coffee can reduce feelings of depression.', 'Owning a dog may reduce heart disease risk.','Stress increases your risk of type 2 diabetes.']
+       const facts = ['Drinking a cup of coffee can reduce feelings of depression.', 'Owning a dog may reduce heart disease risk.', 'Stress increases your risk of type 2 diabetes.'];
+
         function getRandomNumber() {
             return Math.floor(Math.random() * 100) + 1;
         }
+
         function reloadPage() {
-        location.reload();
+            location.reload();
         }
+
+        function getRandomFact() {
+            return facts[Math.floor(Math.random() * facts.length)];
+        }
+
         function calculate() {
             var random_number = getRandomNumber();
             document.getElementById('randomNumber').innerHTML = 'Random Number: ' + random_number;
-            if(random_number %13 == 0){
+
+            if (random_number % 13 == 0) {
                 document.getElementById('randomn').innerHTML = "..You won!";
+            } else {
+                // Use a random fact when not divisible by 13
+                var randomFact = getRandomFact();
+                document.getElementById('randomn').innerHTML = "..You lost! See the Fun Fact: <br> " + randomFact;
             }
-            else{
-                document.getElementById('randomn').innerHTML = "..You lost!";
-            }
-            
         }
+
         document.getElementById('randomNumber').addEventListener('click', reloadPage);
+
         document.addEventListener('DOMContentLoaded', function() {
             calculate();
         });
