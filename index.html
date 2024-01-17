@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Random Number Generator</h1>
+        <button id="randomNumber" >Lottery</button>        
+    </div>
+    <p id="randomn"></p>
+    
+
+    <script>
+        const facts = ['Drinking a cup of coffee can reduce feelings of depression.', 'Owning a dog may reduce heart disease risk.','Stress increases your risk of type 2 diabetes.']
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 100) + 1;
+        }
+        function reloadPage() {
+        location.reload();
+        }
+        function calculate() {
+            var random_number = getRandomNumber();
+            document.getElementById('randomNumber').innerHTML = 'Random Number: ' + random_number;
+            if(random_number %13 == 0){
+                document.getElementById('randomn').innerHTML = "..You won!";
+            }
+            else{
+                document.getElementById('randomn').innerHTML = "..You lost!";
+            }
+            
+        }
+        document.getElementById('randomNumber').addEventListener('click', reloadPage);
+        document.addEventListener('DOMContentLoaded', function() {
+            calculate();
+        });
+    </script>
+</body>
+</html>

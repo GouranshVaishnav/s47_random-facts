@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&family=Rubik+Doodle+Triangles&family=Salsa&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 20px;
+    background: linear-gradient(to bottom,  #f3a7a7 1%, #cc8ff5, rgb(198, 100, 255), #850cf7);
+    color: #fff;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: column;
+}
+h1 {
+    color: #6b6767;
+    font-family: kalnia;
+    font-size: 4vh;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+button#randomNumber {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+button#randomNumber:hover {
+    background-color: #219d54;
+}
+#randomNumber:hover {
+    background-color: #27ae60;
+}
+#randomn {
+    margin-top: 20px;
+    font-size: 5vh;
+    margin: 20vh 20vw;
+    color: #edf0e1;
+    margin-top: 20px;
+    background-color: #850cf7;
+}
